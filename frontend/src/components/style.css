@@ -1,0 +1,356 @@
+.user-management {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  /* Header styles */
+  .user-management h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Form container styles */
+  .user-form {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  /* Input field styles */
+  .user-form input[type="text"],
+  .user-form input[type="email"],
+  .user-form select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+  }
+  
+  /* Radio button container */
+  .radio-group {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  /* Radio button label styles */
+  .radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  /* Button styles */
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-primary {
+    background-color: #3498db;
+    color: white;
+    margin-right: 1rem;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2980b9;
+  }
+  
+  .btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #7f8c8d;
+  }
+  
+  .btn-danger {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Table styles */
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-table th {
+    background: #34495e;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  .user-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .user-table tr:hover {
+    background-color: #f5f6fa;
+  }
+  
+  /* Status indicator */
+  .status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .status-active {
+    background-color: #27ae60;
+    color: white;
+  }
+  
+  .status-inactive {
+    background-color: #95a5a6;
+    color: white;
+  }
+  
+  /* Action buttons container */
+  .action-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .user-management {
+        padding: 1rem;
+    }
+    
+    .user-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+    }
+  }
+  
+
+  /* Permissions container styles */
+.permissions-container {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.permissions-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+}
+
+.permissions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Checkbox styles */
+.permission-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.permission-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    font-size: 0.95rem;
+    color: #34495e;
+}
+
+/* Permission tags in table */
+.permission-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.permission-tag {
+    background: #3498db;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Edit title */
+.edit-title {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .permissions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .permission-tags {
+        flex-direction: column;
+    }
+    
+    .permission-tag {
+        display: inline-block;
+    }
+}
+
+
+/* Table header controls */
+.table-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.table-controls input[type="text"] {
+    padding: 0.75rem;
+    width: 300px;
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.table-controls select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+/* Checkbox column */
+.user-table th:first-child,
+.user-table td:first-child {
+    text-align: center;
+    width: 50px;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bulk delete button */
+.bulk-delete {
+    margin-left: auto;
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.bulk-delete:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive adjustments for controls */
+@media (max-width: 768px) {
+    .table-controls {
+        flex-direction: column;
+    }
+
+    .table-controls input[type="text"],
+    .table-controls select {
+        width: 100%;
+    }
+}
+.icon-bin {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.icon-bin:hover {
+    background-color: #f8d7da;
+    color: #dc3545;
+}
+
+
+
+.role-table th, .role-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.role-table th.sorted-asc,
+.role-table th.sorted-desc {
+    background-color: #f0f0f0;
+}
+
+.btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}

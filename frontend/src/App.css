@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Arial, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header styling */
+.app-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #3b5998;
   color: white;
+  padding: 15px 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.app-header h1 {
+  font-size: 24px;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
 }
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for links */
+.nav-links li a:hover {
+  background-color: #2d4373;
+}
+
+/* Active link */
+.nav-links li a.active {
+  background-color: #1d2d4f;
+}
+
+
