@@ -1,70 +1,169 @@
-# Getting Started with Create React App
+# User Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **React-based User Management System** that provides functionality to manage users and roles, with advanced features like search, filter, sort, and bulk actions.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Add Users**: Create new users with name, email, role, and status.
+- **Edit Users**: Update user details via an intuitive form.
+- **Delete Users**: Remove individual or multiple users at once.
+- **Search**: Quickly locate users by name or email.
+- **Filter by Roles**: Filter users based on their roles.
+- **Sort**: Sort users by name, email, role, or status.
+- **Bulk Actions**: Select multiple users using checkboxes and delete them in one go.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+### Frontend:
+- React (JavaScript)
+- Axios (API Client)
+- CSS for Styling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend:
+- Node.js with Express.js
+- MongoDB for Database
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ensure you have the following installed:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js (v16 or higher)
+- npm or yarn
+- MongoDB (local or remote)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation & Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. Clone the repository
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+git clone https://github.com/your-username/user-management-system.git](https://github.com/ashutosh-187/Role-Based-Access-Control-Dashboard.)
+cd Role-Based-Access-Control-Dashboard
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
 
-## Learn More
+### 2. Install Dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Frontend:
+```bash
+cd frontend
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Backend:
+```bash
+cd backend
+npm install
+```
 
-### Code Splitting
+### 3. Configure the Backend
+Create a `.env` file in the backend directory:
+```env
+PORT=5001
+MONGO_URI=mongodb://localhost:27017/user_management
+```
+Note: Replace `MONGO_URI` with your MongoDB connection string if needed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 4. Run the Application
 
-### Analyzing the Bundle Size
+Start the backend:
+```bash
+cd backend
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Start the frontend:
+```bash
+cd frontend
+npm start
+```
 
-### Making a Progressive Web App
+### 5. Access the Application
+Open your browser and visit: `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Features
 
-### Advanced Configuration
+### User Management
+- **Add Users**: Create new users with name, email, role, and status
+- **Edit Users**: Modify existing user information
+- **Delete Users**: Remove individual or multiple users
+- **Bulk Actions**: Perform operations on multiple users simultaneously
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Search and Filter
+- Real-time search functionality for names and emails
+- Multi-role filtering capability
+- Column-based sorting
 
-### Deployment
+## Project Structure
+```
+user-management-system/
+│
+├── frontend/         # React frontend
+│   ├── public/
+│   ├── src/
+│   │   ├── components/   # React components
+│   │   ├── App.js        # Main app entry point
+│   │   └── style.css     # Styling
+│   └── package.json
+│
+├── backend/          # Node.js backend
+│   ├── models/       # Mongoose models
+│   ├── routes/       # API routes
+│   ├── server.js     # Express server setup
+│   └── package.json
+│
+└── README.md         # Project documentation
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## API Documentation
 
-### `npm run build` fails to minify
+### User Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET    | /api/users | Fetch all users |
+| POST   | /api/users | Create a new user |
+| PUT    | /api/users/:id | Update an existing user |
+| DELETE | /api/users/:id | Delete a user |
+
+### Role Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET    | /api/roles | Fetch all roles |
+
+## Usage Guide
+
+### Managing Users
+1. **Adding a User**:
+   - Fill in the user form with name, email, role, and status
+   - Click "Add User"
+
+2. **Editing a User**:
+   - Click the edit button next to the user
+   - Update desired fields
+   - Save changes
+
+3. **Deleting Users**:
+   - Single user: Click the delete button next to the user
+   - Multiple users:
+     1. Select users via checkboxes
+     2. Click "Delete Selected"
+
+### Search and Filter
+- Use the search bar to find users by name or email
+- Filter users by role using the dropdown menu
+- Sort any column by clicking the column header
+
+## Contributing
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
